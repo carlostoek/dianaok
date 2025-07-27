@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-aiogram
+
 SQLAlchemy
 psycopg2-binary
 python-dotenv
-=======
 aiogram==2.18
->>>>>>> 0c7e77c (uno)
