@@ -450,3 +450,83 @@ python database/setup.py
 # Run the main application
 python main.py
 ```
+
+2025-07-27T20:50:49.624598
+================================ System Message ================================
+
+You will get information about a codebase that is currently on disk in the current folder.
+The user will ask you to write a script that runs the code in a specific way.
+You will answer with code blocks that include all the necessary terminal commands.
+Do not install globally. Do not use sudo.
+Do not explain the code, just give the commands.
+Do not use placeholders, use example values (like . for a folder argument) if necessary.
+
+
+================================ Human Message =================================
+
+
+        Make a unix script that
+        a) installs dependencies
+        b) runs all necessary parts of the codebase (in parallel if necessary)
+        
+Information about the codebase:
+
+```
+File: src/main.py
+1 from aiogram import Bot, Dispatcher, types
+2 from aiogram.contrib.fsm_storage.memory import MemoryStorage
+3 from aiogram.utils import executor
+4 from config import BOT_TOKEN
+5 from bot import register_handlers
+6 
+7 # Initialize bot and dispatcher
+8 bot = Bot(token=BOT_TOKEN)
+9 storage = MemoryStorage()
+10 dp = Dispatcher(bot, storage=storage)
+11 
+12 # Register handlers
+13 register_handlers(dp)
+14 
+15 if __name__ == '__main__':
+16     executor.start_polling(dp, skip_updates=True)
+
+File: src/bot.py
+1 from aiogram import Dispatcher, types
+2 
+3 def register_handlers(dp: Dispatcher):
+4     @dp.message_handler(commands=['start', 'help'])
+5     async def send_welcome(message: types.Message):
+6         await message.reply("Hello! I'm your bot. How can I assist you today?")
+
+File: src/config.py
+1 import os
+2 
+3 # Bot token from environment variable
+4 BOT_TOKEN = os.getenv('BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE')
+
+File: requirements.txt
+1 aiogram==2.18
+
+File: running
+1 pip install -r requirements.txt
+
+File: terminal
+1 export BOT_TOKEN='YOUR_ACTUAL_BOT_TOKEN'
+
+File: file
+1 python src/main.py
+
+```
+
+================================== Ai Message ==================================
+
+```bash
+#!/bin/bash
+
+# Step a: Install dependencies
+pip install -r requirements.txt
+
+# Step b: Run the codebase
+export BOT_TOKEN='YOUR_ACTUAL_BOT_TOKEN'
+python src/main.py
+```

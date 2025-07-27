@@ -1,434 +1,231 @@
-> Eres un desarrollador experto en bots de Telegram, backend asíncrono en Python (con aiogram y SQLAlchemy), sistemas de gamificación, diseño de narrativa interactiva y administración de contenido. Quiero que desarrolles dianaok, un bot de Telegram que combina:
+El bot tiene desplegarse revísalo
 
-canales privados,
-
-narrativa emocional con decisiones,
-
-gamificación (puntos, badges, niveles),
-
-reacciones de usuarios,
-
-sistema de tienda y subastas,
-
-roles y progresión,
-
-panel administrativo completo.
+BOTMAESTRO
 
 
-Todo el sistema se organiza con backend en Python + SQLite para desarrollo y PostgreSQL para producción. El frontend será Telegram, usando botones inline, estados FSM, mensajes enriquecidos y multimedia almacenado directamente en Telegram.
+production
 
+Architecture
+Observability
+Logs
+Settings
 
-
-
----
-
-🎯 Objetivo General:
-
-Crear un sistema completo que gestione la experiencia de usuario dentro de dos canales de Telegram:
-
-Los Kinkys (gratuito): acceso limitado a narrativa y participación básica.
-
-El Diván (VIP): acceso completo a narrativa expandida, contenido especial y funciones avanzadas.
+worker
+Deployments
+Variables
+Metrics
+Settings
+Unexposed service
+us-east4-eqdc4a
+1 Replica
 
 
 
----
+History
 
-🧠 Arquitectura del Proyecto
 
-Crea una estructura limpia y escalable con carpetas como:
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+worker
 /
-├── main.py
-├── database/
-│   ├── setup.py
-│   ├── models.py
-│   └── queries.py
-├── handlers/
-│   ├── start.py
-│   ├── narrative.py
-│   ├── reactions.py
-│   ├── gamification.py
-│   ├── store.py
-│   └── admin_panel.py
-├── logic/
-│   ├── narrative_engine.py
-│   ├── gamification.py
-│   ├── store_logic.py
-│   └── access_control.py
-├── keyboards/
-│   ├── inline.py
-│   └── reply.py
-├── states/
-│   └── user_states.py
-├── utils/
-│   ├── config.py
-│   └── helpers.py
-└── data/
-    └── story_fragments.json
+30192c2
+Crashed
 
+Jul 27, 2025, 2:43 PM
+Get Help
 
----
+DetailsBuildDeploy
 
-👤 Funcionalidades del Usuario
+Filter
+Filter logs using "", (), AND, OR, -
 
-1. Sistema de Narrativa Interactiva:
 
-Fragmentos de historia con decisiones tipo "elige tu aventura".
 
-Acceso condicionado por nivel, puntos o suscripción VIP.
+You reached the start of the range → Jul 27, 2025, 2:43 PM
 
-Algunas decisiones desbloquean partes ocultas.
+Starting Container
 
+Traceback (most recent call last):
 
+  File "/app/main.py", line 3, in <module>
 
-2. Gamificación:
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-Ganas puntos por reaccionar, leer, explorar.
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
-Desbloqueas badges, niveles, y acceso especial.
+Traceback (most recent call last):
 
-Integración de economía (tokens internos).
+  File "/app/main.py", line 3, in <module>
 
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
-3. Reacciones:
+Traceback (most recent call last):
 
-Se permiten solo reacciones a publicaciones.
+  File "/app/main.py", line 3, in <module>
 
-Las reacciones suman puntos automáticamente.
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-Registro en base de datos de qué reaccionó cada usuario.
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
+Traceback (most recent call last):
 
+  File "/app/main.py", line 3, in <module>
 
-4. Roles:
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-Usuario básico, VIP, staff, administrador.
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
-Los roles definen el acceso y visibilidad de ciertas funciones.
+Traceback (most recent call last):
 
+  File "/app/main.py", line 3, in <module>
 
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
+Traceback (most recent call last):
 
----
+  File "/app/main.py", line 3, in <module>
 
-🛍️ Tienda y Subastas
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-Compra objetos, entradas a escenas secretas o privilegios narrativos.
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
-Subastas especiales donde los VIPs pujan con tokens.
+Traceback (most recent call last):
 
-Todo mediante inline buttons.
+  File "/app/main.py", line 3, in <module>
 
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
----
+Traceback (most recent call last):
 
-⚙️ Panel Administrativo
+  File "/app/main.py", line 3, in <module>
 
-Webhook para staff y admins:
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-Crear nuevos fragmentos narrativos.
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
-Activar promos y eventos temporales.
+Traceback (most recent call last):
 
-Ver estadísticas de usuarios, puntos, reacciones, progreso.
+  File "/app/main.py", line 3, in <module>
 
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-Telegram Admin Tools:
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
-Envío masivo de mensajes.
+Traceback (most recent call last):
 
-Crear encuestas narrativas.
+  File "/app/main.py", line 3, in <module>
 
-Controlar el acceso a nuevas temporadas.
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
+Traceback (most recent call last):
 
+  File "/app/main.py", line 3, in <module>
 
----
+    from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-🧩 Base de Datos (ORM SQLAlchemy)
+ModuleNotFoundError: No module named 'aiogram.contrib'
 
-Modelos necesarios:
-
-User(id, username, role, points, level, is_vip)
-
-LorePiece(id, title, content, options, requirements)
-
-UserLorePiece(user_id, lore_id, decision)
-
-Reaction(user_id, message_id, emoji)
-
-Badge(id, name, description, condition)
-
-UserBadge(user_id, badge_id)
-
-Item(id, name, type, price, description)
-
-Inventory(user_id, item_id, quantity)
-
-Auction(id, item_id, start_time, bids)
-
-Bid(user_id, auction_id, amount)
-
-AdminActionLog(...)
-
-
-
----
-
-🤖 Telegram Integration
-
-Usa aiogram 3.x con FSMContext para flujo por estados.
-
-Carga de fragmentos desde story_fragments.json o base de datos.
-
-Usa mensajes enriquecidos con emojis, markdown, multimedia.
-
-Usa botones inline para decisiones, tienda, navegación.
-
-Aplica callback_data estructurado para acciones complejas.
-
-
-
----
-
-🧪 Desarrollo / Producción
-
-Base de datos: SQLite local / PostgreSQL en producción.
-
-Usa .env y sistema de configuración dinámico.
-
-Módulo de logging detallado.
-
-Incluye README.md con instrucciones de instalación y despliegue.
-
-
-
----
-
-💡 Extra: Tono de Diana
-
-Diana es un personaje emocional, enigmático, inteligente.
-
-Usa frases introspectivas, con referencias poéticas y filosóficas.
-Su tono cambia según el tipo de usuario (curioso, lúdico, melancólico).
-
-Genera un archivo diana_voicebank.py con frases listas para su uso según contexto.
-
-
-
----
-
-📦 Salida esperada
-
-Genera todos los archivos de código necesarios para que el bot sea funcional, ejecutable y extensible. Implementa pruebas mínimas, documentación básica y separa lógica de presentación.
-
-
----
-
-🛠️ Módulo de Administración de Canales – DianaBot
-
-Este módulo transforma a DianaBot en un sistema inteligente de gestión de canales privados con lógica de acceso, roles jerárquicos, estadísticas y control total del entorno narrativo y gamificado.
-Va más allá de un simple filtro: es un centro de operaciones narrativo, un sistema de vigilancia emocional y un motor de control dinámico de experiencias.
-
-
----
-
-🎭 ¿Quiénes están involucrados?
-
-🕴️ Lucien – El Mayordomo
-Administrador silencioso de los canales.
-Se encarga de dar la bienvenida, aplicar sanciones suaves, detectar irregularidades y activar eventos narrativos.
-Su lenguaje es sofisticado, ligeramente irónico, pero siempre firme.
-
-👑 Staff y Moderadores
-Usuarios con permisos especiales.
-Pueden usar comandos para enviar mensajes globales, aprobar contenido y revisar estadísticas.
-Son la conexión humana que complementa la automatización.
-
-👤 El Usuario
-Espectador-activo del canal.
-Interactúa principalmente mediante reacciones.
-Sus movimientos y respuestas son monitoreados para ajustar su experiencia.
-
-
----
-
-🧠 ¿Cómo funciona este sistema?
-
-🔹 1. Control de Acceso Avanzado
-
-Los canales están segmentados en:
-
-Público (Los Kinkys)
-
-VIP (El Diván)
-
-
-El acceso VIP se valida mediante:
-
-Base de datos interna.
-
-Subscripción confirmada.
-
-Roles específicos.
-
-
-El sistema puede expulsar automáticamente usuarios sin acceso válido o que no hayan completado pasos previos.
-
-
-
----
-
-🔹 2. Reacciones como Entrada
-
-Las únicas acciones permitidas por usuarios son reacciones.
-
-Cada reacción:
-
-Se registra en la base de datos.
-
-Puede otorgar puntos, desbloquear fragmentos o activar respuestas ocultas.
-
-
-Reaccionar incorrectamente (a ciertos emojis) puede tener consecuencias narrativas o lúdicas.
-
-
-
----
-
-🔹 3. Roles Jerárquicos y Personalizados
-
-El sistema gestiona roles como:
-
-curioso, cazador, devoto, VIP, staff, admin.
-
-
-Cada rol tiene:
-
-Permisos de acceso.
-
-Diferente visualización del contenido.
-
-Experiencia narrativa única (algunos fragmentos aparecen sólo a ciertos roles).
-
-
-
-
----
-
-🔹 4. Estadísticas y Monitorización
-
-El sistema registra:
-
-Cuántas veces un usuario reaccionó.
-
-Qué emojis usa más.
-
-Tiempo promedio entre reacciones.
-
-Qué fragmentos ha desbloqueado.
-
-
-Staff puede ver:
-
-Ranking por actividad.
-
-Jugadores dormidos o ausentes.
-
-Análisis emocional por estilo de respuesta.
-
-
-
-
----
-
-🔹 5. Mensajes Inteligentes Automatizados
-
-El bot puede enviar:
-
-Bienvenidas personalizadas.
-
-Advertencias narrativas (“Lucien te observa…”).
-
-Promociones segmentadas por comportamiento.
-
-
-Los mensajes son emocionales, nunca fríos:
-
-"Has estado muy callado últimamente. Diana te extraña..."
-
-"Algunos secretos sólo se revelan cuando alguien se atreve a mirar más de una vez..."
-
-
-
-
----
-
-🔹 6. Herramientas Administrativas para el Staff
-
-Comandos exclusivos por botón inline o respuesta a mensajes:
-
-/stats @usuario
-
-/promote @usuario vip
-
-/revoke acceso @usuario
-
-/mensaje_global 'texto'
-
-
-Posibilidad de crear eventos como:
-
-Reactivaciones de jugadores dormidos.
-
-Promos de besitos por reacción masiva.
-
-Minijuegos internos (misiones ocultas por emoji).
-
-
-
-
----
-
-🔹 7. Gestión de Contenido por Canal
-
-Cada canal tiene su propio calendario narrativo.
-
-Se pueden configurar:
-
-Horarios de publicación.
-
-Fragmentos programados.
-
-Combinación entre contenido público y VIP.
-
-Crossposting selectivo con pistas o metajuego.
-
-
-
-
----
-
-🔹 8. Panel de Control (futuro web o Telegram embebido)
-
-Visualización de:
-
-Usuarios activos vs. pasivos.
-
-Curvas de reacción por día.
-
-Fragmentos con más engagement.
-
-Logs de decisiones narrativas.
-
-
-Control directo sobre:
-
-Activar/desactivar niveles narrativos.
-
-Iniciar eventos automáticos por tiempo o reacción.
+worker | Railway
