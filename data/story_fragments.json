@@ -1,0 +1,17 @@
+{
+    "1": {
+        "content": "Bienvenido al inicio de tu aventura.",
+        "options": [
+            {"id": 2, "text": "Explorar el bosque"},
+            {"id": 3, "text": "Visitar la aldea"}
+        ]
+    },
+    "2": {
+        "content": "Te adentras en el bosque y encuentras un camino misterioso.",
+        "options": []
+    },
+    "3": {
+        "content": "La aldea está llena de vida y oportunidades.",
+        "options": []
+    }
+}

@@ -1,0 +1,13 @@
+6. Inicia el bot: `python main.py`
+
+## Despliegue
+
+Para producción, asegúrate de configurar `DATABASE_URL` para PostgreSQL.
+
+## Contribución
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT.

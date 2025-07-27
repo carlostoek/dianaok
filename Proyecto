@@ -1,0 +1,29 @@
+/
+├── main.py
+├── database/
+│   ├── setup.py
+│   ├── models.py
+│   └── queries.py
+├── handlers/
+│   ├── start.py
+│   ├── narrative.py
+│   ├── reactions.py
+│   ├── gamification.py
+│   ├── store.py
+│   └── admin_panel.py
+├── logic/
+│   ├── narrative_engine.py
+│   ├── gamification.py
+│   ├── store_logic.py
+│   └── access_control.py
+├── keyboards/
+│   ├── inline.py
+│   └── reply.py
+├── states/
+│   └── user_states.py
+├── utils/
+│   ├── config.py
+│   └── helpers.py
+├── data/
+│   └── story_fragments.json
+└── diana_voicebank.py
