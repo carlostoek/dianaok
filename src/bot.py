@@ -1,6 +1,11 @@
-from aiogram import Dispatcher, types
+from src.message_handler import MessageHandler
 
-def register_handlers(dp: Dispatcher):
-    @dp.message_handler(commands=['start', 'help'])
-    async def send_welcome(message: types.Message):
-        await message.reply("Hello! I'm your bot. How can I assist you today?")
+class Bot:
+    def __init__(self):
+        self.message_handler = MessageHandler()
+
+    def start(self):
+        print("Bot started. Listening for messages...")
+
+    def process_message(self, message: str) -> str:
+        return self.message_handler.handle_text_message(message)

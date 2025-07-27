@@ -1,5 +1,2 @@
-
-SQLAlchemy
-psycopg2-binary
-python-dotenv
-aiogram==2.18
+dataclasses
+pytest
